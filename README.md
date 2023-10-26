@@ -5,7 +5,7 @@
 However, PRs with the fixes or proposals are welcomed!
 
 ## Task
-The task is to implement functions on different Core JS topics. There are eight modules with different tasks. Each module consists of tasks for specified topic:
+The task is to implement functions on different Core JS topics. There are four modules with different tasks. Each module consists of tasks for specified topic:
 
 1. Strings
 2. Numbers
