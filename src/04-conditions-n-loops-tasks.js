@@ -534,6 +534,9 @@ function getMatrixProduct(m1, m2) {
     result.push(resultRow);
   }
   return result;
+
+  // return m1.map((row) => Array.from({ length: m2[0].length },
+  //   (_, col2) => row.reduce((sum, item, col1) => sum + item * m2[col1][col2], 0)));
 }
 
 
