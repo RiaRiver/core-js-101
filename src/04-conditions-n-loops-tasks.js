@@ -596,6 +596,25 @@ function evaluateTicTacToePosition(position) {
   if (isWinner(mainDiagonal)) return mainDiagonal[0];
   if (isWinner(minorDiagonal)) return minorDiagonal[0];
 
+  // const lines = [...position];
+
+  // eslint-disable-next-line max-len
+  // const getDiagonal = (matrix, main = true) => matrix.map((_, row, array) => array[row].at(main ? row : -(row + 1)));
+
+  // // eslint-disable-next-line no-param-reassign
+  // lines.forEach((item) => { item.length = 3; });
+
+  // position.forEach((_, row, array) => lines.push(Array.from({ length: size },
+  //   (__, col) => array[col][row])));
+
+  // lines.push(getDiagonal(position));
+  // lines.push(getDiagonal(position, false));
+
+  // // eslint-disable-next-line no-restricted-syntax
+  // for (const line of lines) {
+  //   if (new Set(line).size === 1 && line[0] !== undefined) return line[0];
+  // }
+
   return undefined;
 }
 
