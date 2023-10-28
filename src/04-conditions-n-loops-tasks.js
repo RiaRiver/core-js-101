@@ -409,6 +409,16 @@ function isBracketsBalanced(str) {
   }
 
   return !(stack.length % 2);
+
+  // let result = str;
+  // while (result.length) {
+  //   const deletedPair = result.replace(/(\[\])|({})|(\(\))|(<>)/g, '');
+  //   if (deletedPair === result) break;
+
+  //   result = deletedPair;
+  // }
+
+  // return result.length === 0;
 }
 
 
