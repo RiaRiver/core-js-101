@@ -570,8 +570,33 @@ function getMatrixProduct(m1, m2) {
  *    [    ,   ,    ]]
  *
  */
-function evaluateTicTacToePosition(/* position */) {
-  throw new Error('Not implemented');
+function evaluateTicTacToePosition(position) {
+  const size = position.length;
+  const isWinner = (line) => new Set(line).size === 1 && line[0] !== undefined;
+
+  const mainDiagonal = [];
+  const minorDiagonal = [];
+
+  for (let row = 0; row < size; row += 1) {
+    const horizontal = [];
+    const vertical = [];
+
+    for (let col = 0; col < size; col += 1) {
+      horizontal.push(position[row][col]);
+      vertical.push(position[col][row]);
+    }
+
+    if (isWinner(horizontal)) return horizontal[0];
+    if (isWinner(vertical)) return vertical[0];
+
+    mainDiagonal.push(position[row][row]);
+    minorDiagonal.push(position[row][size - 1 - row]);
+  }
+
+  if (isWinner(mainDiagonal)) return mainDiagonal[0];
+  if (isWinner(minorDiagonal)) return minorDiagonal[0];
+
+  return undefined;
 }
 
 
